@@ -34,7 +34,7 @@ const evento = button.addEventListener('click', function () {
         palpite.focus();
         palpite.value = ''
 
-        resposta.textContent = `Tente um número mais baixo.<br> Números jogados: ${contador}`;
+        resposta.textContent = `Tente um número mais baixo. Números jogados: ${contador}`;
         resposta.classList.add('tentativas');
 
     }
@@ -76,6 +76,6 @@ const jogarNovamente = restart.addEventListener('click', function () {
  /* 
 - Tentar fazer com que a div de resposta não altere a posição dos outros elementos 
 - Achar alguma cor que combine para o fundo
-- Tentar cirar um lugar separado para armazenar os números já enviados 
+- Tentar achar um lugar separado para armazenar os números já enviados 
 - Implementar um botão de dicas
 */
