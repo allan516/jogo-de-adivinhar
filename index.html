@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo de Adivinhar</title>
+</head>
+<body>
+    <main>
+        <h1 class="titulo">Jogo de adivinhação de números</h1>
+        <p>Selecione um número entre 1 e 100. Veja se você consegue adivinhar em 10 tentativas ou menos.</p>
+        <span>
+            <label for="palpite">Digite um palpite: </label>
+            <input type="number" id="palpite">
+        
+            <button id="button">Enviar Palpite</button>
+            <button id="restart" class="display">Jogar Novamente</button>
+        </span>
+
+        <div>
+            <p class="resposta"></p>
+            <p class="acertou"></p>
+            <p class="errou"></p>
+        </div>
+    </main>
+    
+    <script  defer src="index.js"></script>
+</body>
+</html>
