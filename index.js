@@ -10,6 +10,11 @@ const contador = [];
 console.log(aleatorio, palpite.value);
 const evento = button.addEventListener('click', function () {
     let valorPalpite = parseInt(palpite.value);
+    if (valorPalpite > 100 || valorPalpite < 1) {
+        palpite.focus();
+        palpite.value = '';
+        return alert(`Digite um número entre 1 e 100`);
+    }
     if(aleatorio === valorPalpite) {
         acertouMiseravy();
         palpite.focus();
