@@ -44,7 +44,7 @@ function acertouMiseravy() {
     palpite.focus();
     palpite.value = '';
     acertou.style.display = 'block';
-    acertou.textContent = `Acertou essa bagaça!`;
+    acertou.textContent = `Acertooou!`;
 }
 
 
