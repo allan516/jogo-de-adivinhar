@@ -21,22 +21,19 @@ const evento = button.addEventListener('click', function () {
     if (aleatorio > valorPalpite) {
         contador.length === 9 ? gameOver() : contador.push(valorPalpite);
         palpite.focus();
-        palpite.value = ''
-
-        resposta.style.display = 'block';
+        palpite.value = '';
 
         resposta.textContent = `Tente um número mais alto. Números jogados: ${contador}`;
-        resposta.classList.add('tentativas');
+        resposta.style.display = 'block';
     }
     
     if (aleatorio < valorPalpite) {
         contador.length === 9 ? gameOver() : contador.push(valorPalpite);
         palpite.focus();
-        palpite.value = ''
+        palpite.value = '';
 
         resposta.textContent = `Tente um número mais baixo. Números jogados: ${contador}`;
-        resposta.classList.add('tentativas');
-
+        resposta.style.display = 'block';
     }
 });
 
@@ -44,7 +41,7 @@ function acertouMiseravy() {
     palpite.focus();
     palpite.value = '';
     acertou.style.display = 'block';
-    acertou.textContent = `Acertooou!`;
+    acertou.textContent = `Acertouu!`;
 }
 
 
@@ -58,11 +55,9 @@ function gameOver() {
 }
 
 const jogarNovamente = restart.addEventListener('click', function () {
-    if (document.body.querySelector('.errou') || 
-        document.body.querySelector('.acertou') || 
-        document.body.querySelector('.tentativas')) {
+    if (acertou || errou || resposta) {
         aleatorio = Math.floor(Math.random() * 100 + 1);
-        document.querySelectorAll('.acertou, .errou, .tentativas').forEach(element => {
+        document.querySelectorAll('.acertou, .errou, .resposta').forEach(element => {
             palpite.focus();
             palpite.value = '';
             contador.length = 0;
@@ -76,6 +71,7 @@ const jogarNovamente = restart.addEventListener('click', function () {
  /* 
 - Tentar fazer com que a div de resposta não altere a posição dos outros elementos 
 - Achar alguma cor que combine para o fundo
-- Tentar achar um lugar separado para armazenar os números já enviados 
+- Tentar cirar um lugar separado para armazenar os números já enviados 
 - Implementar um botão de dicas
+- Impedir que seja colocado números maiores que 100 e números repetidos
 */

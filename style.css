@@ -53,7 +53,7 @@ main span button, input {
     box-shadow:1px 1px 2px rgba(0, 0, 0, 0.658);
 }
 
-.tentativas {
+.resposta {
     display: none;
     background-color: rgba(255, 0, 0, 0.562);
     padding: 10px;
